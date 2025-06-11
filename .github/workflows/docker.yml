@@ -1,5 +1,8 @@
 name: docker
 on:
+  push:
+    branches:
+      - firesquid
   workflow_dispatch: # manually run
 
 env:
