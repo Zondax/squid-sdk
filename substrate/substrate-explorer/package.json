@@ -1,5 +1,5 @@
 {
-  "name": "@subsquid/substrate-explorer",
+  "name": "zondax/substrate-explorer",
   "version": "2.0.5",
   "description": "Block explorer GraphQL API for subsquid substrate archive",
   "license": "GPL-3.0-or-later",

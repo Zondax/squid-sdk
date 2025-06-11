@@ -16,14 +16,13 @@ function publish() {
         --push \
         --target "$img" \
         --label "org.opencontainers.image.url=https://github.com/subsquid/squid-sdk/tree/$(git rev-parse HEAD)/${pkg_path}" \
-        -t "subsquid/$img:$pkg_version" \
-        -t "subsquid/$img:$major" \
-        -t "subsquid/$img:$tag" \
-        -t "subsquid/$img:$release" || exit 1
+        -t "zondax/$img:$pkg_version" \
+        -t "zondax/$img:$major" \
+        -t "zondax/$img:$tag" \
+        -t "zondax/$img:$release" || exit 1
 }
 
 publish substrate/substrate-ingest || exit 1
 publish substrate/substrate-explorer || exit 1
-publish util/chain-status-service || exit 1
 
 git push origin "HEAD:release/${release}" --follow-tags --verbose
